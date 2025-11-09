@@ -6,7 +6,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { COLORS } from './constants';
-import { Button } from "@/components/ui/button";
+import { PageButton } from "@/components/ui/PageButton";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import ProjectsPage from "./pages/Projects";
@@ -50,27 +50,27 @@ export default function PortfolioSite(): JSX.Element {
           Tae Kwang (Jason) Chung's Website
         </h1>
         <nav className="space-x-4" aria-label="Main navigation">
-          <Button
+          <PageButton
             variant={page === "home" ? "default" : "outline"}
             onClick={() => setPage("home")}
             aria-pressed={page === "home"}
           >
             Home
-          </Button>
-          <Button
+          </PageButton>
+          <PageButton
             variant={page === "about" ? "default" : "outline"}
             onClick={() => setPage("about")}
             aria-pressed={page === "about"}
           >
             About Me
-          </Button>
-          <Button
+          </PageButton>
+          <PageButton
             variant={page === "projects" ? "default" : "outline"}
             onClick={() => setPage("projects")}
             aria-pressed={page === "projects"}
           >
             Projects
-          </Button>
+          </PageButton>
         </nav>
       </header>
 
